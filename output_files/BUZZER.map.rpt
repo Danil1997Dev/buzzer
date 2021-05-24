@@ -1,0 +1,600 @@
+Analysis & Synthesis report for BUZZER
+Fri May 21 22:29:03 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Logic Cells Representing Combinational Loops
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |BUZZER
+ 13. Parameter Settings for User Entity Instance: COUNT:cntSec
+ 14. Parameter Settings for User Entity Instance: COUNT:cntTemp
+ 15. Parameter Settings for User Entity Instance: COUNT:cntNote
+ 16. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
+ 17. Port Connectivity Checks: "COUNT:cntNote"
+ 18. Port Connectivity Checks: "COUNT:cntTemp"
+ 19. Port Connectivity Checks: "COUNT:cntSec"
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri May 21 22:29:03 2021       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; BUZZER                                      ;
+; Top-level Entity Name              ; BUZZER                                      ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 727                                         ;
+;     Total combinational functions  ; 724                                         ;
+;     Dedicated logic registers      ; 83                                          ;
+; Total registers                    ; 83                                          ;
+; Total pins                         ; 8                                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE10F17C8       ;                    ;
+; Top-level entity name                                            ; BUZZER             ; BUZZER             ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                         ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------+---------+
+; BUZZER.sv                        ; yes             ; User SystemVerilog HDL File        ; C:/intelFPGA/18.1/BUZZER/BUZZER.sv                                         ;         ;
+; note.txt                         ; yes             ; Auto-Found File                    ; C:/intelFPGA/18.1/BUZZER/note.txt                                          ;         ;
+; led.txt                          ; yes             ; Auto-Found File                    ; C:/intelFPGA/18.1/BUZZER/led.txt                                           ;         ;
+; count.sv                         ; yes             ; Auto-Found SystemVerilog HDL File  ; C:/intelFPGA/18.1/BUZZER/count.sv                                          ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc      ;         ;
+; db/lpm_divide_gkm.tdf            ; yes             ; Auto-Generated Megafunction        ; C:/intelFPGA/18.1/BUZZER/db/lpm_divide_gkm.tdf                             ;         ;
+; db/sign_div_unsign_8nh.tdf       ; yes             ; Auto-Generated Megafunction        ; C:/intelFPGA/18.1/BUZZER/db/sign_div_unsign_8nh.tdf                        ;         ;
+; db/alt_u_div_4af.tdf             ; yes             ; Auto-Generated Megafunction        ; C:/intelFPGA/18.1/BUZZER/db/alt_u_div_4af.tdf                              ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/intelFPGA/18.1/BUZZER/db/add_sub_7pc.tdf                                ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/intelFPGA/18.1/BUZZER/db/add_sub_8pc.tdf                                ;         ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 727       ;
+;                                             ;           ;
+; Total combinational functions               ; 724       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 84        ;
+;     -- 3 input functions                    ; 457       ;
+;     -- <=2 input functions                  ; 183       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 388       ;
+;     -- arithmetic mode                      ; 336       ;
+;                                             ;           ;
+; Total registers                             ; 83        ;
+;     -- Dedicated logic registers            ; 83        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 8         ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 76        ;
+; Total fan-out                               ; 2284      ;
+; Average fan-out                             ; 2.78      ;
++---------------------------------------------+-----------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                              ;
++----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                     ; Entity Name         ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |BUZZER                                ; 724 (178)           ; 83 (10)                   ; 0           ; 0            ; 0       ; 0         ; 8    ; 0            ; |BUZZER                                                                                                 ; BUZZER              ; work         ;
+;    |COUNT:cntNote|                     ; 22 (22)             ; 22 (22)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BUZZER|COUNT:cntNote                                                                                   ; COUNT               ; work         ;
+;    |COUNT:cntSec|                      ; 26 (26)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BUZZER|COUNT:cntSec                                                                                    ; COUNT               ; work         ;
+;    |COUNT:cntTemp|                     ; 25 (25)             ; 25 (25)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BUZZER|COUNT:cntTemp                                                                                   ; COUNT               ; work         ;
+;    |lpm_divide:Div0|                   ; 473 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BUZZER|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;       |lpm_divide_gkm:auto_generated|  ; 473 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BUZZER|lpm_divide:Div0|lpm_divide_gkm:auto_generated                                                   ; lpm_divide_gkm      ; work         ;
+;          |sign_div_unsign_8nh:divider| ; 473 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BUZZER|lpm_divide:Div0|lpm_divide_gkm:auto_generated|sign_div_unsign_8nh:divider                       ; sign_div_unsign_8nh ; work         ;
+;             |alt_u_div_4af:divider|    ; 473 (473)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BUZZER|lpm_divide:Div0|lpm_divide_gkm:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_4af:divider ; alt_u_div_4af       ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; buzzer                                              ; Selector10          ; yes                    ;
+; buzzer_737                                          ; Selector10          ; yes                    ;
+; i[0]                                                ; i[4]                ; yes                    ;
+; i[1]                                                ; i[4]                ; yes                    ;
+; i[2]                                                ; i[4]                ; yes                    ;
+; i[31]                                               ; i[4]                ; yes                    ;
+; i[4]                                                ; i[4]                ; yes                    ;
+; i[3]                                                ; i[4]                ; yes                    ;
+; i[6]                                                ; i[4]                ; yes                    ;
+; i[7]                                                ; i[4]                ; yes                    ;
+; i[8]                                                ; i[4]                ; yes                    ;
+; i[9]                                                ; i[4]                ; yes                    ;
+; i[10]                                               ; i[4]                ; yes                    ;
+; i[11]                                               ; i[4]                ; yes                    ;
+; i[12]                                               ; i[4]                ; yes                    ;
+; i[13]                                               ; i[4]                ; yes                    ;
+; i[14]                                               ; i[4]                ; yes                    ;
+; i[15]                                               ; i[4]                ; yes                    ;
+; i[16]                                               ; i[4]                ; yes                    ;
+; i[17]                                               ; i[4]                ; yes                    ;
+; i[18]                                               ; i[4]                ; yes                    ;
+; i[19]                                               ; i[4]                ; yes                    ;
+; i[20]                                               ; i[4]                ; yes                    ;
+; i[21]                                               ; i[4]                ; yes                    ;
+; i[22]                                               ; i[4]                ; yes                    ;
+; i[23]                                               ; i[4]                ; yes                    ;
+; i[24]                                               ; i[4]                ; yes                    ;
+; i[25]                                               ; i[4]                ; yes                    ;
+; i[26]                                               ; i[4]                ; yes                    ;
+; i[27]                                               ; i[4]                ; yes                    ;
+; i[28]                                               ; i[4]                ; yes                    ;
+; i[29]                                               ; i[4]                ; yes                    ;
+; i[30]                                               ; i[4]                ; yes                    ;
+; i[5]                                                ; i[4]                ; yes                    ;
+; rst_l_note                                          ; Selector7           ; yes                    ;
+; rst_l_temp                                          ; Selector9           ; yes                    ;
+; Number of user-specified and inferred latches = 36  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops               ;
++--------------------------------------------------------+---+
+; Logic Cell Name                                        ;   ;
++--------------------------------------------------------+---+
+; Selector0~0                                            ;   ;
+; Selector0~1                                            ;   ;
+; Selector0~2                                            ;   ;
+; Number of logic cells representing combinational loops ; 3 ;
++--------------------------------------------------------+---+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-------------------------------------------------------------+
+; Registers Removed During Synthesis                          ;
++----------------------------------------+--------------------+
+; Register name                          ; Reason for Removal ;
++----------------------------------------+--------------------+
+; j[3..31]                               ; Lost fanout        ;
+; Total Number of Removed Registers = 29 ;                    ;
++----------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 83    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 73    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 25    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |BUZZER ;
++---------------------+----------+---------------------------------------+
+; Parameter Name      ; Value    ; Type                                  ;
++---------------------+----------+---------------------------------------+
+; CLK_REF             ; 50000000 ; Signed Integer                        ;
+; NUM_STATE           ; 3        ; Signed Integer                        ;
+; WIDTH_NUM_STATE     ; 2        ; Signed Integer                        ;
+; NUM_OCTAV           ; 1        ; Signed Integer                        ;
+; WIDTH_NUM_OCTAV     ; 3        ; Signed Integer                        ;
+; NOTE_MIN            ; 21       ; Signed Integer                        ;
+; WIDTH_RANG_NOTE_MIN ; 22       ; Signed Integer                        ;
+; NOTE_MAX            ; 520      ; Signed Integer                        ;
+; WIDTH_NOTE_MAX      ; 10       ; Signed Integer                        ;
+; SIZE                ; 4        ; Signed Integer                        ;
+; TEMP                ; 8        ; Signed Integer                        ;
+; RANG_TEMP           ; 25000000 ; Signed Integer                        ;
+; WIDTH_RANG_TEMP     ; 25       ; Signed Integer                        ;
++---------------------+----------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: COUNT:cntSec ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; WIDTH          ; 26    ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: COUNT:cntTemp ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; WIDTH          ; 25    ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: COUNT:cntNote ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; WIDTH          ; 22    ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 26             ; Untyped                ;
+; LPM_WIDTHD             ; 10             ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_gkm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "COUNT:cntNote" ;
++--------+-------+----------+---------------+
+; Port   ; Type  ; Severity ; Details       ;
++--------+-------+----------+---------------+
+; enable ; Input ; Info     ; Stuck at VCC  ;
++--------+-------+----------+---------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "COUNT:cntTemp" ;
++--------+-------+----------+---------------+
+; Port   ; Type  ; Severity ; Details       ;
++--------+-------+----------+---------------+
+; enable ; Input ; Info     ; Stuck at VCC  ;
++--------+-------+----------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "COUNT:cntSec"                                                                               ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; count[24..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 8                           ;
+; cycloneiii_ff         ; 83                          ;
+;     CLR               ; 48                          ;
+;     ENA CLR           ; 25                          ;
+;     plain             ; 10                          ;
+; cycloneiii_io_obuf    ; 1                           ;
+; cycloneiii_lcell_comb ; 724                         ;
+;     arith             ; 336                         ;
+;         2 data inputs ; 110                         ;
+;         3 data inputs ; 226                         ;
+;     normal            ; 388                         ;
+;         0 data inputs ; 24                          ;
+;         1 data inputs ; 19                          ;
+;         2 data inputs ; 30                          ;
+;         3 data inputs ; 231                         ;
+;         4 data inputs ; 84                          ;
+;                       ;                             ;
+; Max LUT depth         ; 76.30                       ;
+; Average LUT depth     ; 46.98                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Fri May 21 22:28:50 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off BUZZER -c BUZZER
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file buzzer.sv
+    Info (12023): Found entity 1: BUZZER File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file top.sv
+    Info (12023): Found entity 1: TOP File: C:/intelFPGA/18.1/BUZZER/TOP.sv Line: 2
+Info (12127): Elaborating entity "BUZZER" for the top level hierarchy
+Warning (10850): Verilog HDL warning at BUZZER.sv(47): number of words (14) in memory file does not match the number of elements in the address range [0:6] File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 47
+Critical Warning (10237): Verilog HDL warning at BUZZER.sv(124): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 124
+Warning (10240): Verilog HDL Always Construct warning at BUZZER.sv(122): inferring latch(es) for variable "buzzer", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Warning (10240): Verilog HDL Always Construct warning at BUZZER.sv(122): inferring latch(es) for variable "rst_l_temp", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Warning (10240): Verilog HDL Always Construct warning at BUZZER.sv(122): inferring latch(es) for variable "rst_l_note", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Warning (10240): Verilog HDL Always Construct warning at BUZZER.sv(122): inferring latch(es) for variable "en_temp", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Warning (10240): Verilog HDL Always Construct warning at BUZZER.sv(122): inferring latch(es) for variable "en_note", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Warning (10240): Verilog HDL Always Construct warning at BUZZER.sv(122): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Warning (10030): Net "note_frecuncy.data_a" at BUZZER.sv(42) has no driver or initial value, using a default initial value '0' File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 42
+Warning (10030): Net "note_frecuncy.waddr_a" at BUZZER.sv(42) has no driver or initial value, using a default initial value '0' File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 42
+Warning (10030): Net "led.data_a" at BUZZER.sv(43) has no driver or initial value, using a default initial value '0' File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 43
+Warning (10030): Net "led.waddr_a" at BUZZER.sv(43) has no driver or initial value, using a default initial value '0' File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 43
+Warning (10030): Net "note_frecuncy.we_a" at BUZZER.sv(42) has no driver or initial value, using a default initial value '0' File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 42
+Warning (10030): Net "led.we_a" at BUZZER.sv(43) has no driver or initial value, using a default initial value '0' File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 43
+Info (10041): Inferred latch for "i[0]" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "i[1]" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "i[2]" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "i[3]" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "i[4]" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "i[5]" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "i[6]" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "i[7]" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "i[8]" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "i[9]" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "i[10]" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "i[11]" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "i[12]" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "i[13]" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "i[14]" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "i[15]" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "i[16]" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "i[17]" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "i[18]" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "i[19]" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "i[20]" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "i[21]" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "i[22]" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "i[23]" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "i[24]" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "i[25]" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "i[26]" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "i[27]" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "i[28]" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "i[29]" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "i[30]" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "i[31]" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "en_note" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "en_temp" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "rst_l_note" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "rst_l_temp" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Info (10041): Inferred latch for "buzzer" at BUZZER.sv(122) File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+Warning (12125): Using design file count.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: COUNT File: C:/intelFPGA/18.1/BUZZER/count.sv Line: 4
+Info (12128): Elaborating entity "COUNT" for hierarchy "COUNT:cntSec" File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 89
+Warning (10230): Verilog HDL assignment warning at count.sv(17): truncated value with size 32 to match size of target (26) File: C:/intelFPGA/18.1/BUZZER/count.sv Line: 17
+Info (12128): Elaborating entity "COUNT" for hierarchy "COUNT:cntTemp" File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 103
+Warning (10230): Verilog HDL assignment warning at count.sv(17): truncated value with size 32 to match size of target (25) File: C:/intelFPGA/18.1/BUZZER/count.sv Line: 17
+Info (12128): Elaborating entity "COUNT" for hierarchy "COUNT:cntNote" File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 110
+Warning (10230): Verilog HDL assignment warning at count.sv(17): truncated value with size 32 to match size of target (22) File: C:/intelFPGA/18.1/BUZZER/count.sv Line: 17
+Info (276014): Found 2 instances of uninferred RAM logic
+    Info (276004): RAM logic "led" is uninferred due to inappropriate RAM size File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 43
+    Info (276004): RAM logic "note_frecuncy" is uninferred due to inappropriate RAM size File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 42
+Critical Warning (127005): Memory depth (8) in the design file differs from memory depth (7) in the Memory Initialization File "C:/intelFPGA/18.1/BUZZER/db/BUZZER.ram1_BUZZER_8acabe27.hdl.mif" -- setting initial value for remaining addresses to 0
+Critical Warning (127005): Memory depth (8) in the design file differs from memory depth (7) in the Memory Initialization File "C:/intelFPGA/18.1/BUZZER/db/BUZZER.ram0_BUZZER_8acabe27.hdl.mif" -- setting initial value for remaining addresses to 0
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 163
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 163
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 163
+    Info (12134): Parameter "LPM_WIDTHN" = "26"
+    Info (12134): Parameter "LPM_WIDTHD" = "10"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_gkm.tdf
+    Info (12023): Found entity 1: lpm_divide_gkm File: C:/intelFPGA/18.1/BUZZER/db/lpm_divide_gkm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_8nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_8nh File: C:/intelFPGA/18.1/BUZZER/db/sign_div_unsign_8nh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_4af.tdf
+    Info (12023): Found entity 1: alt_u_div_4af File: C:/intelFPGA/18.1/BUZZER/db/alt_u_div_4af.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc File: C:/intelFPGA/18.1/BUZZER/db/add_sub_7pc.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc File: C:/intelFPGA/18.1/BUZZER/db/add_sub_8pc.tdf Line: 23
+Warning (13012): Latch buzzer has unsafe behavior File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Selector0~0 File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 125
+Warning (13012): Latch buzzer_737 has unsafe behavior File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 122
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal rst_l File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 19
+Warning (13012): Latch rst_l_note has unsafe behavior File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Selector0~2 File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 125
+Warning (13012): Latch rst_l_temp has unsafe behavior File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 81
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal rst_l File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 19
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 29 registers lost all their fanouts during netlist optimizations.
+Info (17016): Found the following redundant logic cells in design
+    Info (17048): Logic cell "lpm_divide:Div0|lpm_divide_gkm:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_4af:divider|add_sub_2_result_int[0]~6" File: C:/intelFPGA/18.1/BUZZER/db/alt_u_div_4af.tdf Line: 87
+    Info (17048): Logic cell "lpm_divide:Div0|lpm_divide_gkm:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_4af:divider|add_sub_3_result_int[0]~8" File: C:/intelFPGA/18.1/BUZZER/db/alt_u_div_4af.tdf Line: 122
+    Info (17048): Logic cell "lpm_divide:Div0|lpm_divide_gkm:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_4af:divider|add_sub_4_result_int[0]~10" File: C:/intelFPGA/18.1/BUZZER/db/alt_u_div_4af.tdf Line: 127
+    Info (17048): Logic cell "lpm_divide:Div0|lpm_divide_gkm:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_4af:divider|add_sub_5_result_int[0]~12" File: C:/intelFPGA/18.1/BUZZER/db/alt_u_div_4af.tdf Line: 132
+    Info (17048): Logic cell "lpm_divide:Div0|lpm_divide_gkm:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_4af:divider|add_sub_6_result_int[0]~14" File: C:/intelFPGA/18.1/BUZZER/db/alt_u_div_4af.tdf Line: 137
+    Info (17048): Logic cell "lpm_divide:Div0|lpm_divide_gkm:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_4af:divider|add_sub_8_result_int[0]~18" File: C:/intelFPGA/18.1/BUZZER/db/alt_u_div_4af.tdf Line: 147
+    Info (17048): Logic cell "lpm_divide:Div0|lpm_divide_gkm:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_4af:divider|add_sub_10_result_int[0]~22" File: C:/intelFPGA/18.1/BUZZER/db/alt_u_div_4af.tdf Line: 37
+    Info (17048): Logic cell "lpm_divide:Div0|lpm_divide_gkm:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_4af:divider|add_sub_11_result_int[0]~22" File: C:/intelFPGA/18.1/BUZZER/db/alt_u_div_4af.tdf Line: 42
+    Info (17048): Logic cell "lpm_divide:Div0|lpm_divide_gkm:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_4af:divider|add_sub_12_result_int[0]~22" File: C:/intelFPGA/18.1/BUZZER/db/alt_u_div_4af.tdf Line: 47
+    Info (17048): Logic cell "lpm_divide:Div0|lpm_divide_gkm:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_4af:divider|add_sub_13_result_int[0]~22" File: C:/intelFPGA/18.1/BUZZER/db/alt_u_div_4af.tdf Line: 52
+    Info (17048): Logic cell "lpm_divide:Div0|lpm_divide_gkm:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_4af:divider|add_sub_18_result_int[0]~22" File: C:/intelFPGA/18.1/BUZZER/db/alt_u_div_4af.tdf Line: 77
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 736 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 5 output pins
+    Info (21061): Implemented 728 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
+    Info: Peak virtual memory: 4773 megabytes
+    Info: Processing ended: Fri May 21 22:29:03 2021
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:27
+
+

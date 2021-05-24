@@ -1,0 +1,31 @@
+begin
+	  NOTEct  =   0;
+	  TEMPct  =   0;
+	  	begin
+		if (!rst_l)
+			buzzer <= 1;
+		else if (enable == 1'b1)
+			TEMPct <= TEMPct + 1;
+	end
+
+	  if ( rst_l == 1'b0 ) begin
+		 buzzer <= 1'b1;
+	  end else begin 
+	    if ( TEMPct <= RANG_TEMP ) begin
+		   TEMPct  <=   TEMPct + 1'b1; 
+			
+		   if ( NOTEct <= CLK_REF/NOTE ) begin
+			  NOTEct  <=   NOTEct + 1'b1; 
+			  buzzer  <=   1'b0;
+			end else begin 
+			  NOTEct  <=   1'b0; 
+			  buzzer  <=   1'b1;
+			end
+			
+		 end else begin 
+		 
+		   TEMPct  <=   0; 
+			buzzer  <=   1;
+		 end
+	  end
+    end

@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at BUZZER.sv(27): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA/18.1/BUZZER/BUZZER.sv Line: 27

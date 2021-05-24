@@ -1,0 +1,82 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA/18.1/BUZZER
+vBUZZER
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1621864377
+!i10b 1
+!s100 HNfb5`mK_Z]<6<K=15YzU0
+IFV8g@NF8ZkLbn:0o_Z8NS0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 BUZZER_sv_unit
+S1
+R0
+w1621864370
+8../BUZZER/BUZZER.sv
+F../BUZZER/BUZZER.sv
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1621864377.000000
+Z6 !s107 ../BUZZER/TOP.sv|../BUZZER/COUNT.sv|../BUZZER/BUZZER.sv|
+Z7 !s90 -reportprogress|300|../BUZZER/BUZZER.sv|../BUZZER/COUNT.sv|../BUZZER/TOP.sv|
+!i113 1
+Z8 tCvgOpt 0
+n@b@u@z@z@e@r
+vCOUNT
+R1
+R2
+!i10b 1
+!s100 Qz4?1;4>1K<DN`MYPNzg03
+I18515[fWOnh68nI68lG2b3
+R3
+!s105 COUNT_sv_unit
+S1
+R0
+w1620829802
+8../BUZZER/COUNT.sv
+F../BUZZER/COUNT.sv
+L0 4
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+n@c@o@u@n@t
+vTOP
+R1
+R2
+!i10b 1
+!s100 7aTPCSCP^gRDJLA?A5aBA0
+IWheDOKnWmY@GT^TY[WP;l0
+R3
+!s105 TOP_sv_unit
+S1
+R0
+w1621854993
+8../BUZZER/TOP.sv
+F../BUZZER/TOP.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+n@t@o@p

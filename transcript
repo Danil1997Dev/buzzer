@@ -1,0 +1,92 @@
+# Reading C:/intelFPGA/16.1/modelsim_ase/tcl/vsim/pref.tcl
+# ERROR: No extended dataflow license exists
+# vsim -gui do 
+# Start time: 21:42:12 on May 24,2021
+# ** Error: (vsim-3170) Could not find 'do'.
+#         Searched libraries:
+#             C:/intelFPGA/18.1/BUZZER/work
+# Error loading design
+# End time: 21:42:13 on May 24,2021, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+d TOP.do
+# ambiguous command name "d": dataset datasetOf dataset_open dataset_parse_filename datasetcheck dbgecho debugVersionString deflate deicon_all delEditCurActiveWin delete deleteEditCursor delete_helper describe destroy destroy_kernel dfAddDataflow df_Copy df_Cut df_Delete df_GetSel df_HighlightNet df_HighlightSelection df_InRegionCommand df_NumDataflowWindows df_Paste df_PointToPoint df_Redo df_ShowWave df_Undo df_causeReset df_causeSet df_context_type df_defineToolbar df_doSearchBarSearch df_findCause df_findDrivingInsts df_findcause df_findx df_gen_all df_gen_region df_removeToolbars df_select_env df_selectedXNets df_showNetsOfInstInWave dict directoryDialog directory_image disable disablebp disablebp_image divTime dnd do down downarrow draw_source_lines drivers dumpDataflow dumpDataflowInputs dumpDataflowOutputs dumpFileToTranscript dumpObjTypes dump_registry dump_win_hier dumpcov dumpcov_srcobj dumplog64 dumpmsgloghash dumpnl dw
+do TOP.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:42:30 on May 24,2021
+# vlog -reportprogress 300 ../BUZZER/BUZZER.sv ../BUZZER/COUNT.sv ../BUZZER/TOP.sv 
+# -- Compiling module BUZZER
+# -- Compiling module COUNT
+# -- Compiling module TOP
+# 
+# Top level modules:
+# 	TOP
+# End time: 21:42:30 on May 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.TOP 
+# Start time: 21:42:30 on May 24,2021
+# Loading sv_std.std
+# Loading work.TOP
+# Loading work.BUZZER
+# Loading work.COUNT
+# ** Warning: (vsim-3017) ../BUZZER/TOP.sv(17): [TFMPC] - Too few port connections. Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /TOP/dut File: ../BUZZER/BUZZER.sv
+# ** Warning: (vsim-3722) ../BUZZER/TOP.sv(17): [TFMPC] - Missing connection for port 'led_o'.
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+run
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 8 of file "note.txt". (Current address [7], address range [0:6])    : ../BUZZER/BUZZER.sv(48)
+#    Time: 0 ns  Iteration: 0  Instance: /TOP/dut
+run
+run
+run
+run
+run
+run
+run
+run
+run
+do TOP.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:52:57 on May 24,2021
+# vlog -reportprogress 300 ../BUZZER/BUZZER.sv ../BUZZER/COUNT.sv ../BUZZER/TOP.sv 
+# -- Compiling module BUZZER
+# -- Compiling module COUNT
+# -- Compiling module TOP
+# 
+# Top level modules:
+# 	TOP
+# End time: 21:52:57 on May 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 21:53:02 on May 24,2021, Elapsed time: 0:10:32
+# Errors: 0, Warnings: 3
+# vsim -voptargs="+acc" work.TOP 
+# Start time: 21:53:02 on May 24,2021
+# Loading sv_std.std
+# Loading work.TOP
+# Loading work.BUZZER
+# Loading work.COUNT
+# ** Warning: (vsim-3017) ../BUZZER/TOP.sv(17): [TFMPC] - Too few port connections. Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /TOP/dut File: ../BUZZER/BUZZER.sv
+# ** Warning: (vsim-3722) ../BUZZER/TOP.sv(17): [TFMPC] - Missing connection for port 'led_o'.
+# WARNING: No extended dataflow license exists
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+run
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 8 of file "note.txt". (Current address [7], address range [0:6])    : ../BUZZER/BUZZER.sv(48)
+#    Time: 0 ns  Iteration: 0  Instance: /TOP/dut
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
